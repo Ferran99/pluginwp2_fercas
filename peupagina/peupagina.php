@@ -8,4 +8,9 @@ Author: El teu nom i cognom
 Author URI: L'adreça URL del teu compte de Github
 License: GNU GPLv3
 */
+function funcio_peupagina($art, $text){
+	return '<a>Peu de pàgina</a>';
+}
+add_shortcode('peupagina', 'funcio_peupagina');
+
 ?>
