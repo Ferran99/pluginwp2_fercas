@@ -8,6 +8,8 @@ Author: Ferran Castañé
 Author URI: L'adreça URL del teu compte de Github
 License: GNU GPLv3
 */
+
+
 function peu_pagina_per_defecte($atr,$text) {
 	return '<a>Peu de pàgina</a>';
 }
@@ -23,7 +25,12 @@ function admin_menu_peu_pagina(){
 	function nouPeuPagDef(){
 		include_once('formPeuPagina.php');
 		}
+		function afegPeuPagDef(){
+			echo "<div style='color: red;
+			font-size: 10px;
+			margin: 10px;'>".get_option('footer_text')."</div>";
+		}
+		add_action('wp_footer','afegPeuPagDef');
 	add_action('admin_menu','admin_menu_peu_pagina');
 ?>
 
-?>
